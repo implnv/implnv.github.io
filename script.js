@@ -10,7 +10,7 @@ VK.init({
 
 VK.Auth.login((response) => {
     if (response.session) {
-        VK.Api.call('friends.getLists', { user_id: 238741249, v: "5.73" }, (response) => {
+        VK.Api.call('friends.getLists', { user_id: 238741249, return_system: 1, v: "5.73" }, (response) => {
             console.log(response);
         });
     }
