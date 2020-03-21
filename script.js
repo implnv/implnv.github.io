@@ -14,4 +14,4 @@ VK.Auth.login((response) => {
             console.log(response);
         });
     }
-});
+}, 2);
