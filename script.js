@@ -6,7 +6,7 @@ VK.init({
 
 VK.Auth.login((response) => {
     if (response.session) {
-        VK.Api.call('fave.get', { item_type: 'post', v: "5.103" }, (response) => {
+        VK.Api.call('fave.get', { item_type: "post", v: "5.103" }, (response) => {
             console.log(response);
         });
     }
