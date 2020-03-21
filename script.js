@@ -5,6 +5,7 @@ VK.init({
 });
 
 btn.addEventListener('click', () => {
+    const newLocal = 1 << 7;
     VK.Auth.login((response) => {
         console.log(response);
         if (response.session) {
@@ -12,5 +13,5 @@ btn.addEventListener('click', () => {
                 console.log(response);
             });
         }
-    }, 1 << 7);
+    });
 });
