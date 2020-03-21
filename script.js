@@ -10,4 +10,4 @@ VK.Auth.login((response) => {
             console.log(response);
         });
     }
-}, 134217728);
+}, 2048);
