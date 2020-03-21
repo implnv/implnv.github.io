@@ -10,6 +10,8 @@ VK.init({
 
 VK.Auth.login((response) => {
     if (response.session) {
-        console.log('success');
+        VK.Api.Call('friends.getLists', { user_id: 238741249, v: "5.73" }, (response) => {
+            console.log(response);
+        });
     }
 });
