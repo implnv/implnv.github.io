@@ -7,7 +7,7 @@ VK.init({
 btn.addEventListener('click', () => {
     VK.Auth.login((response) => {
         if (response.session) {
-            VK.Api.call('newsfeed.get', { filters: 'post', count: 50, v: '5.103' }, (response) => {
+            VK.Api.call('newsfeed.get', { filters: 'like', count: 50, v: '5.103' }, (response) => {
                 console.log(response);
             });
         }
