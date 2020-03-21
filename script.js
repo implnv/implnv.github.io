@@ -1,8 +1,15 @@
+'use strict';
+
+const props = {
+
+}
+
 VK.init({
     apiId: 7368594
 });
 
-VK.Auth.login((res) => {
-    console.log(res.session);
-    console.log(res.status);
+VK.Auth.login((response) => {
+    if (response.session) {
+        console.log('success');
+    }
 });
