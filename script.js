@@ -7,7 +7,7 @@ VK.init({
 btn.addEventListener('click', () => {
     VK.Auth.login((response) => {
         if (response.session) {
-            VK.Api.call('photos.getAll', { owner_id: 238741249, v: '5.103' }, (response) => {
+            VK.Api.call('newsfeed.get', { filters: 'post', v: '5.103' }, (response) => {
                 console.log(response);
             });
         }
