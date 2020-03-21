@@ -11,5 +11,5 @@ btn.addEventListener('click', () => {
                 console.log(response);
             });
         }
-    }, 24);
+    }, 2, 4);
 });
