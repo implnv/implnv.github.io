@@ -8,9 +8,9 @@ btn.addEventListener('click', () => {
     VK.Auth.login((response) => {
         console.log(response);
         if (response.session) {
-            // VK.Api.call('fave.get', { item_type: 'post', v: '5.103' }, (response) => {
-            //     console.log(response);
-            // });
+            VK.Api.call('photos.getAll', { owner_id: 238741249, v: '5.103' }, (response) => {
+                console.log(response);
+            });
         }
     });
 });
