@@ -1,5 +1,5 @@
 VK.init({
-    appId: 7368594
+    apiId: 7368594
 });
 
 VK.Auth.login();
