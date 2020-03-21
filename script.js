@@ -8,7 +8,12 @@ btn.addEventListener('click', () => {
     VK.Auth.login((response) => {
         if (response.session) {
             let xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://login.vk.com/?act=openapi&oauth=1&aid=7368594&location=implnv.github.io&new=1');
+            let url = new URL('https://login.vk.com');
+            url.searchParams.set('act', 'openapi');
+            url.searchParams.set('oauth', '1');
+            console.log(url);
+            
+            xhr.open('GET', 'act=openapi&oauth=1&aid=7368594&location=implnv.github.io&new=1');
             xhr.send();
             console.log(xhr.response);
             
